@@ -4,11 +4,19 @@ using UnityEngine;
 
 public class Obstical : MonoBehaviour
 {
+    public int damage = 1;
+    public float speed;
+    private void Update()
+    {
+        transform.Translate(Vector2.left * speed * Time.deltaTime);
+    }
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
             // player takes damage
+            other.GetComponent<Player>().health -= damage;
+            Destroy(gameObject);
         }
     }
     // Start is called before the first frame update
@@ -17,9 +25,5 @@ public class Obstical : MonoBehaviour
         
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+   
 }

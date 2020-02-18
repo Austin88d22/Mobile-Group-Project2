@@ -7,6 +7,8 @@ public class Sawner : MonoBehaviour
     public GameObject obstacle;
     private float timeBtwSpawn;
     public float startTimeBtwSpawn;
+    public float decreaseTime;
+    public float minTime = 0.65f;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +22,11 @@ public class Sawner : MonoBehaviour
         {
             Instantiate(obstacle, transform.position, Quaternion.identity);
             timeBtwSpawn = startTimeBtwSpawn;
+            if (startTimeBtwSpawn > minTime)
+            {
+                startTimeBtwSpawn -= decreaseTime;
+            }
+            startTimeBtwSpawn -= decreaseTime;
         }
         else
         {
