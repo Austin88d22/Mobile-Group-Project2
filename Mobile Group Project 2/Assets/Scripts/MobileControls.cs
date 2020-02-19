@@ -7,7 +7,7 @@ public class MobileControls : MonoBehaviour
     public float jumpForce;
     private Rigidbody2D rb;
 
-    private bool facingRight = true;
+    //private bool facingRight = true;
 
     public bool grounded;
 
