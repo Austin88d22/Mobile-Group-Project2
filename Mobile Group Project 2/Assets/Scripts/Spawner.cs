@@ -27,7 +27,6 @@ public class Spawner : MonoBehaviour
             {
                 startTimeBtwSpawn -= decreaseTime;
             }
-            startTimeBtwSpawn -= decreaseTime;
         }
         else
         {
