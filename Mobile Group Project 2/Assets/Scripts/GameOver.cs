@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-public class GameOver : MonoBehaviour
+public class gameOver : MonoBehaviour
 {
     //RETRY FUNCTION
     public void Retry()
