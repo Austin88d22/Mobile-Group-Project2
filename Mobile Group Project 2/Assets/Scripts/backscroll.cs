@@ -6,7 +6,7 @@ public class backscroll : MonoBehaviour
 {
     Material mat;
     Vector2 offset;
-    public int xVelocity, yVelocity;
+    public float xVelocity, yVelocity;
     private void Awake()
     {
         mat = GetComponent<Renderer>().material;
