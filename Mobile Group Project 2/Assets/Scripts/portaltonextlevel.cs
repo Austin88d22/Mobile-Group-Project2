@@ -5,7 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class portaltonextlevel : MonoBehaviour
 {
+    private int nextSceneToLoad;
     public float speed;
+    private void Start()
+    {
+        nextSceneToLoad = SceneManager.GetActiveScene().buildIndex + 1;
+    }
     private void Update()
     {
         transform.Translate(Vector2.left * speed * Time.deltaTime);
@@ -14,7 +19,7 @@ public class portaltonextlevel : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            
+            SceneManager.LoadScene(nextSceneToLoad);
         }
     }
 }
