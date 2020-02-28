@@ -1238,7 +1238,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthDisplay: {fileID: 373261615}
-  health: 3
+  health: 1000000
   gameOver: {fileID: 1496381218}
 --- !u!1 &970906471
 GameObject:
