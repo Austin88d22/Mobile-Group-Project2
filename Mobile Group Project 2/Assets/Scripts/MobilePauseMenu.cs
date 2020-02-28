@@ -9,7 +9,10 @@ public class MobilePauseMenu : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GetComponent<Canvas>().enabled = false;
+        if (gameObject.name == "Winner Menu")
+            GetComponent<Canvas>().enabled = true;
+        else
+            GetComponent<Canvas>().enabled = false;
     }
 
     // Update is called once per frame
